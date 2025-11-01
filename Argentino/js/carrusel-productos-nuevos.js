@@ -21,7 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			const captionText = img.getAttribute('data-title') || img.alt || 'Producto';
 			const caption = document.createElement('p');
 			caption.className = 'producto-caption';
-			caption.textContent = captionText;
+			// insertar un enlace que apunta a catalogo.html dentro del <p>
+			const link = document.createElement('a');
+			link.href = 'producto.html';
+			link.textContent = captionText;
+			caption.appendChild(link);
 			wrapper.appendChild(caption);
 
 
@@ -82,3 +86,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	updateButtons();
 });
 
+console.log("conectado");

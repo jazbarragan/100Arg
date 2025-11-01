@@ -75,6 +75,21 @@ header nav ul li a{
     color: var(--color-negro);
 }
 
+
+header nav ul.nav-links li a:hover{
+    text-decoration: underline;
+    color: var(--color-secundario);
+}
+
+
+header nav ul.nav-links li svg{
+    fill: var(--color-negro);
+}
+
+header nav ul.nav-links li svg:hover{
+    fill: var(--color-secundario);
+}
+
 /* Contenedor del banner */
 .banner{
     width: 100%;
@@ -116,6 +131,10 @@ header nav ul li a{
     background-color: var(--color-primario);
     border-radius: 8px;
     animation: catalogo 1s infinite alternate;
+}
+
+.btn-catalogo a:hover{
+    color: var(--color-secundario);
 }
 
 @keyframes catalogo {
@@ -186,12 +205,11 @@ header nav ul li a{
     padding: 18px;
     background-color: var(--color-secundario);
     border-radius: 8px;
-    /* sombra negra sutil alrededor del botón */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
 }
 
 .Hero-info div p:hover{
-    transform: translateY(-2px);
+    background-color: var(--color-claro);
 }
 
 .Hero-info div p a{
@@ -199,6 +217,10 @@ header nav ul li a{
     font-family: 'Roboto', sans-serif;
     color: var(--color-fondo);
     text-decoration: none;
+}
+
+.Hero-info div p a:hover{
+    color: var(--color-secundario);
 }
 
 /* Carrusel-fotos-productos-hero  */
@@ -233,7 +255,7 @@ header nav ul li a{
         background-image: url(../img/productos/producto3.jpg);
     }
     42.84% {
-        background-image: url(/img/productos/producto4.jpg);
+        background-image: url(../img/productos/producto4.jpg);
     }
     57.12% {
         background-image: url(../img/productos/producto5.jpg);
@@ -473,6 +495,11 @@ section.tarjeta-de-venta div p a{
 
 }
 
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto .producto-caption a{
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
 .carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto:hover .producto-caption{
     display: block;
     transform: translateY(0);
@@ -503,7 +530,6 @@ section.tarjeta-de-venta div p a{
     overflow: hidden;
     gap: 50px;
     justify-content: center;
-    margin-top: 90px;
     margin-bottom: 30px;
 }
 
@@ -700,4 +726,9 @@ footer img{
     object-fit: cover;
 }
 
+.padre-carrusel-animado{
+    width: 100%;
+    height: auto;
+    margin-top: 90px;
+}
 

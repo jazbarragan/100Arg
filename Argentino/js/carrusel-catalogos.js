@@ -58,4 +58,4 @@ if (btnLeft) btnLeft.addEventListener('click', (e) => { e.preventDefault(); rota
 // inicializar
 updateCarousel();
 
-
+console.log("conectado");

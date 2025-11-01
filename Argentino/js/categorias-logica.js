@@ -28,3 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log('Observer iniciado para', items.length, 'categorías');
 });
+
+console.log("conectado");
