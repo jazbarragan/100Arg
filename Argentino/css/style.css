@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root{
+    --color-primario: #6EC1E4;
+    --color-secundario: #4054B2;
+    --color-acento: #61CE70;
+    --color-fondo: #FFFFFF;
+    --color-texto: #7A7A7A;
+    --color-negro: #000000;
+    --color-claro: rgba(192, 236, 255, 0.18);
+}
+body{
+    /* background-color: var(--color-negro); */
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+}
+
+header .logo{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+header .logo h2{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-negro);
+    margin-left: 10px;
+}
+
+header nav img{
+    width: 100px;
+    height: 90px;
+    margin: 0px;
+    padding: 0px;
+}
+
+header nav p{
+    font-size: 30px;
+    font-family: 'Imperial Script', cursive;
+    font-weight: 400px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 30px;
+    margin-right: 30px;
+}
+
+header nav ul li{
+    list-style: none;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-negro);
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+/* Contenedor del banner */
+.banner{
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* div de titulo y boton del banner */
+.content-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Span del contenedor del banner */
+.content-banner .titulo-banner{
+    font-weight: bold;
+    font-size: 26px;
+    color: var(--color-negro);
+    font-family: 'Roboto', sans-serif;
+    margin: 0 5px 0 5px;
+}
+
+/* Otro texto en el banner */
+.content-banner p{
+    color: var(--color-negro);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 0 5px 0 5px;
+}
+
+/* Boton del banner */
+.btn-catalogo{
+    margin: 50px;
+    padding: 12px 21px 12px 21px;
+    background-color: var(--color-primario);
+    border-radius: 8px;
+    animation: catalogo 1s infinite alternate;
+}
+
+@keyframes catalogo {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(4px);
+    }
+}
+
+.btn-catalogo a{
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-fondo);
+    text-decoration: none;
+}
+
+/* Hero */
+.Hero{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    background-color: var(--color-fondo);
+}
+
+/*div del lado izquierdo del hero - Info del Hero */
+.Hero-info{
+    margin-top: 45px;
+    width: 50%;
+    height: auto;
+    padding: 15px;
+    /* background-color: var(--color-claro); */
+    display: grid;
+    grid-template-rows: 70px 30px 150px;
+    gap: 40px;
+    align-content: start;
+}
+
+.info-hero-titulo, .info-hero-subtitulo{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.info-hero-titulo{
+    font-size: 75px;
+    font-family: 'Imperial Script', cursive;
+}
+
+.info-hero-subtitulo{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Botones en el hero */
+.Hero-info div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hero-info div p{
+    margin: 0px 10px 0px 10px;
+    padding: 18px;
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+    /* sombra negra sutil alrededor del botón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+}
+
+.Hero-info div p:hover{
+    transform: translateY(-2px);
+}
+
+.Hero-info div p a{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-fondo);
+    text-decoration: none;
+}
+
+/* Carrusel-fotos-productos-hero  */
+.carrusel-fotos-productos-hero{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 45%;
+    height: 700px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: var(--color-texto); */
+}
+
+.carrusel-fotos-productos-hero .container-foto{
+    width: 600px;
+    height: 600px;
+    animation: slider 38s infinite ease-in-out;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url(../img/productos/producto1.jpg);
+    }
+    14.28% {
+        background-image: url(../img/productos/producto2.jpg);
+    }
+    28.56% {
+        background-image: url(../img/productos/producto3.jpg);
+    }
+    42.84% {
+        background-image: url(/img/productos/producto4.jpg);
+    }
+    57.12% {
+        background-image: url(../img/productos/producto5.jpg);
+    }
+    71.4% {
+        background-image: url(../img/productos/producto6.jpg);
+    }
+    85.68%, 100% {
+        background-image: url(../img/productos/producto7.jpg);
+    }
+}
+
+/* Barra de acciones */
+section.actions{
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(122,122,122,0.2);
+}
+
+section.actions ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+section.actions ul li{
+    list-style: none;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-negro);
+}
+
+section.actions ul li a{
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+section.actions ul li a:hover{
+    text-decoration: underline;
+    color: var(--color-secundario);
+}
+
+section.tarjeta-de-venta{
+    width: 400px;
+    height: 500px;
+    background-color: var(--color-fondo);
+    margin: 50px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    border-radius: 8px;
+    border: #4054B2 solid 1px;
+    display: none;
+}
+
+section.tarjeta-de-venta img{
+    width: 300px;
+    height: 300px;
+}
+
+section.tarjeta-de-venta .tarjeta-de-venta-titulo{
+    width: 350px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 5px;
+    color: var(--color-secundario);
+    text-align: center;
+}
+
+section.tarjeta-de-venta div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.tarjeta-de-venta div p{
+    margin: 10px;
+    padding: 15px;
+    background-color: var(--color-claro);
+    border-radius: 8px;
+}
+
+section.tarjeta-de-venta div p a{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+/* carrusel-productos-nuevos */
+.carrusel-productos-nuevos{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: var(--color-negro); */
+}
+
+.subtitulo-home, .Nuestros-catalogos{
+    margin: 0px;
+    font-size: 24px;
+    color: var(--color-secundario);
+    font-family: 'Roboto', sans-serif;
+    height: 20px;
+    padding: 20px;
+}
+
+.carrusel-productos-nuevos .carrusel-productos-nuevos-view{
+    margin: 0px;
+    padding: 0px;
+    height: 320px;
+    width: 100%;
+    display: block;
+    position: relative; /* para posicionar flechas encima */
+    overflow: visible; /* permitir que el hover sobresalga */
+
+}
+
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional{
+    margin: 0px;
+    padding: 12px 20px;
+    height: 320px;
+    width: auto;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    overflow-x: auto; /* scroll horizontal para desplazar */
+    overflow-y: visible; /* permitir que los elementos sobresalgan verticalmente */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.flecha-izquierda, .flecha-derecha{
+    width: 48px;
+    height: 56px;
+    background-color: rgba(122, 122, 122, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 6px;
+    /* Asegurarnos de que las flechas queden por encima de los overlays de producto */
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 180ms ease;
+    pointer-events: none; /* inactivo hasta hover */
+    backdrop-filter: blur(4px);
+}
+
+.flecha-izquierda{ left: 8px; }
+.flecha-derecha{ right: 8px; }
+
+/* Mostrar flechas al hacer hover sobre la vista del carrusel */
+.carrusel-productos-nuevos .carrusel-productos-nuevos-view:hover .flecha-izquierda,
+.carrusel-productos-nuevos .carrusel-productos-nuevos-view:hover .flecha-derecha{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estado deshabilitado */
+.flecha-izquierda.disabled, .flecha-derecha.disabled{
+    opacity: 0.28 !important;
+    pointer-events: none !important;
+}
+
+/* Estilos para las imágenes del carrusel */
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex: 0 0 auto; /* evitar que se encojan */
+}
+
+/* ocultar scrollbar en navegadores webkit (opcional estético) */
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional::-webkit-scrollbar{ display: none; }
+
+/* Contenedor por producto dentro del carrusel: aplicar el look de caja aquí
+   para que el título y la tarjeta formen parte de la misma caja */
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    transition: transform 180ms ease;
+    z-index: 1;
+    /* box style */
+    width: 244px; /* image (220) + horizontal padding */
+    padding: 12px;
+    box-sizing: border-box;
+    background: var(--color-fondo);
+    border-radius: 8px;
+    border: 1px solid rgba(64,84,178,0.06);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+/* Diseño de la imagen en el carrusel: ahora ocupa el 100% del ancho interior */
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto img{
+    transition: transform 200ms cubic-bezier(.2,.9,.2,1);
+    will-change: transform;
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* título pequeño que aparece sólo al hacer hover sobre el producto */
+
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto .producto-caption{
+    margin: 8px 0 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-secundario);
+    opacity: 1;
+    transform: translateY(6px);
+    transition: opacity 160ms ease, transform 160ms ease;
+    pointer-events: none;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-secundario);
+    font-weight: bold;
+    display: none;
+
+}
+
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto:hover .producto-caption{
+    display: block;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* efecto scale en hover: elevar por encima del carrusel y menos movimiento vertical */
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto:hover{
+    /* Mantener el hover visible pero debajo de las flechas para permitir clics */
+    z-index: 1000;
+    transform: translateY(-6px);
+}
+
+.carrusel-productos-nuevos .carrusel-productos-nuevos-funcional .producto:hover img{
+    /* keep the original image visible but dimmed instead of removing it completely */
+    transition: opacity 160ms ease, transform 200ms ease;
+    transform: scale(1.02);
+}
+
+/* <!-- tarjetas carrusel animado --> */
+
+/* contenedor del carrusel */
+.carrusel-tarjetas-animadas-catalogo{
+    padding: 10px 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+/* Section que contiene la imagen */
+.tarjeta-animado-catalogo{
+    width:auto;
+    height: auto;
+    transition: transform 1s, filter 0.5s;
+    filter: blur(3px);
+    margin: 0px;
+    padding: 0px;
+}
+
+.tarjeta-animado-catalogo.active{
+    height: 500px;
+    filter: blur(0px);
+    transform: translateX(0) scale(1);
+    transition: transform 300ms ease;
+    animation: activateCardBounce 0.5s ease-in; /* Animación con rebote al activarse */
+    box-shadow: 0 0 12px var(--color-negro);
+    margin: 0px;
+    padding: 0px;
+
+}
+
+/* Animacion de cuando aparece la card activa */
+@keyframes activateCardBounce {
+    0% {
+        transform: scale(0.8); /* Comienza más pequeña y elevada */
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1); /* Rebote hacia abajo */
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1); /* Termina en su posición normal */
+        opacity: 1;
+    }
+}
+
+
+.tarjeta-animado-catalogo img{
+    width: 400px;
+    height: 500px;
+}
+
+/* Mapear las clases usadas por el JS a estilos de posición/escala
+     para lograr el efecto: centro activo, dos cercas (más pequeñas) y dos lejos (aún más pequeñas) */
+.tarjeta-animado-catalogo{
+        transition: transform 300ms ease, opacity 300ms ease;
+        transform-origin: center center;
+}
+
+.tarjeta-animado-catalogo.side-left-cerca {
+    transform: translateX(30px) scale(0.8);
+    z-index: 2;
+}
+
+.tarjeta-animado-catalogo.side-right-cerca {
+    transform: translateX(-30px) scale(0.8);
+    z-index: 2;
+}
+
+.tarjeta-animado-catalogo.side-left {
+    transform: translateX(130px) scale(0.7);
+    z-index: 1;
+}
+
+.tarjeta-animado-catalogo.side-right {
+    transform: translateX(-130px) scale(0.7);
+    z-index: 1;
+}
+
+/* Contenedor que contiene las flechas del carrusel animado*/
+.container-arrows{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-arrows svg{
+    fill: var(--color-texto);
+}
+
+/* Manejo del movimiento de las cards, unas estan mas cerca que las otras */
+.card.side-left {
+  transform: translateX(-640px) scale(0.8); /* Tarjeta más alejada a la izquierda */
+}
+
+.card.side-right {
+  transform: translateX(640px) scale(0.8); /* Tarjeta más alejada a la derecha */
+}
+
+.card.side-left-cerca {
+  transform: translateX(-320px) scale(0.9); /* Tarjeta más cercana a la izquierda */
+}
+
+.card.side-right-cerca {
+  transform: translateX(320px) scale(0.9); /* Tarjeta más cercana a la derecha */
+}
+
+.svg-wsp{
+    border-radius: 100%;
+    background-color: #25D366;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+/* Categorias */
+.categoria {
+    border-radius: 100%;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+
+}
+
+.categoria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         
+    object-position: center;   
+    display: block;
+    border-radius: 100%;
+}
+
+.categoria:hover .info-cat{
+   visibility: visible;
+}
+
+.info-cat{
+    background-color: rgb(255,255,255,0.3);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+.categoria .info-cat .name-categoria {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-fondo);
+}
+
+
+.info-cat .cant-productos-categoria {
+    font-size: 14px;
+    color: var(--color-negro);
+}
+
+/* contenedor de categorias */
+.container-categorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(122,122,122,0.2);
+    height: auto;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer{
+    width: 100%;
+    height: auto;
+}
+
+footer img{
+    object-fit: cover;
+}
+
+
